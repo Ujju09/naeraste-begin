@@ -37,8 +37,8 @@ export default function Newsletter() {
             textAlign: "center",
           }}
         >
-          Currently, we are offering three subjects: Science, Social Science and
-          Maths for class 9th students.
+          Currently, we are offering resources for class 9th students. One step
+          at a time.
         </p>
         <div className={styles.grid}>
           {subjects.map((subject, index) => (
@@ -49,6 +49,9 @@ export default function Newsletter() {
             </Link>
           ))}
         </div>
+      </div>
+      <div className={styles.community}>
+        <h1 className={styles.textGradient}>Making every student lucky.</h1>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Newsletter from '../components/start'
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div >
       <Head>
         <title>naeRaste</title>
         <meta name="description" content="Superpowered notebooks" />
@@ -14,6 +14,7 @@ const Home: NextPage = () => {
       </Head>
     
           <Newsletter />
+          
      
       
 

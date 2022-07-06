@@ -14,7 +14,15 @@
 }
 
 
-
+.community{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 0rem 0;
+  font-family: 'Lexend', monospace;
+}
 
 
 
@@ -31,11 +39,11 @@
 
 .title {
   
-  line-height: 2;
+  line-height: 1.2;
   font-size: 2rem;
 
-  width: 100vw;
-  /* background-color: #1B3EA8; */
+  width: 90%;
+  
   color: white;
   font-weight: 300;
 }
@@ -66,7 +74,7 @@
 }
 
 .card {
-  margin: 0.5rem;
+  margin: 1rem;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -77,6 +85,15 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   /* max-width: 300px; */
   width: 300px;
+}
+
+.textGradient{
+  background: -webkit-linear-gradient(rgb(73, 82, 212), rgb(185, 59, 152));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  
 }
 
 .iframe{
