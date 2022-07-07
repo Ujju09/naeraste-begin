@@ -11,6 +11,9 @@ export default function Newsletter() {
 
   return (
     <div className={styles.main}>
+      <div className={styles.community}>
+        <h1 className={styles.textGradient}>Making every student lucky.</h1>
+      </div>
       <div
         style={{
           color: "#D05E70",
@@ -51,7 +54,11 @@ export default function Newsletter() {
         </div>
       </div>
       <div className={styles.community}>
-        <h1 className={styles.textGradient}>Making every student lucky.</h1>
+        <h1 className={styles.textGradient}>
+          {" "}
+          naeRaste <br />
+          नए रास्ते <br />
+        </h1>
       </div>
     </div>
   );
