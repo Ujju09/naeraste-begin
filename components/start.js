@@ -9,7 +9,6 @@ export default function Newsletter() {
   const subjects = ["Science", "Social Science", "Maths"];
   const paths = ["science", "social", "maths"];
 
-
   return (
     <div className={styles.main}>
       <div className={styles.community}>

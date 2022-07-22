@@ -1,23 +1,44 @@
 /** @format */
-import striptags from "striptags";
+
+import styles from "../styles/Home.module.css";
+import Script from "next/script";
+import Image from "next/image";
+import { useState } from "react";
+import MCQ from "../components/questions";
 export default function Diksha(data) {
   const questions = data.data["questions"];
   console.log(questions);
   const questionsArray = Object.entries(questions);
-  questionsArray.pop(questionsArray.length);
-  console.log(questionsArray[0][1]["params"]["question"]);
-  //   console.log(questions[0].params.question);
+  questionsArray.pop(questionsArray.length); // remove last element as it contains different object.
+
+  const [selected, setSelected] = useState([]);
+
+  const [isSelected, setIsSelected] = useState(false);
+
+  console.log(selected);
+
   return (
-    <div>
+    <div className={styles.mainDiksha}>
+      <Script
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+      ></Script>
       <h1>Diksha</h1>
-      {questionsArray.map((question, index) => {
-        return (
-          <div key={index}>
-            <h2>{striptags(question[1]["params"]["question"])}</h2>
-            {/* <p>{question[1]["params"]["answer"]}</p> */}
-          </div>
-        );
-      })}
+      <div className={styles.questionCard}>
+        {questionsArray.map((question, index) => {
+          // console.log(question[1]["params"]["media"]["params"]);
+          return (
+            <MCQ
+              key={index}
+              question={
+                index + 1 + "." + " " + question[1]["params"]["question"]
+              }
+              answer={question[1]["params"]["answers"]}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
