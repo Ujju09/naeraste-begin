@@ -51,6 +51,17 @@
   font-family: 'Lexend', monospace;
 }
 
+.answerChosen{
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: start;
+font-weight: 400;
+  border-radius: 10px;
+  color: #0070f3;
+  border-color: #0070f3;
+  font-family: 'Lexend', monospace;
+}
+
 
 
 .questionCard{
@@ -243,8 +254,9 @@
   color: white;
   padding: 10px 16px;
   text-align: center;
+  justify-content: end;
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 13px;
   margin: 4px 2px;
   cursor: pointer;
@@ -257,6 +269,8 @@
   border: none;
   color: white;
   padding: 10px 16px;
+  cursor: none;
+  justify-content: end;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -266,6 +280,19 @@
   border-radius: 4px;
   font-family: 'Lexend', monospace;
 }
+
+.correctAnswer{
+ 
+  border: none;
+  color: rgb(57, 191, 97);
+  padding: 10px 16px;
+
+  text-decoration: none;
+  display: inline-block;
+  
+  font-family:  monospace;
+}
+
 
 .button{
   background-color:#D05E70;

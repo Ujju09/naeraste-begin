@@ -2,20 +2,14 @@
 
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
-import Image from "next/image";
-import { useState } from "react";
 import MCQ from "../components/questions";
+import { useState } from "react";
+import Image from "next/image";
+
 export default function Diksha(data) {
   const questions = data.data["questions"];
-  console.log(questions);
   const questionsArray = Object.entries(questions);
   questionsArray.pop(questionsArray.length); // remove last element as it contains different object.
-
-  const [selected, setSelected] = useState([]);
-
-  const [isSelected, setIsSelected] = useState(false);
-
-  console.log(selected);
 
   return (
     <div className={styles.mainDiksha}>
@@ -27,7 +21,13 @@ export default function Diksha(data) {
       <h1>Diksha</h1>
       <div className={styles.questionCard}>
         {questionsArray.map((question, index) => {
-          // console.log(question[1]["params"]["media"]["params"]);
+          const questionObj = question[1]["params"]["answers"];
+          const mediaObj = question[1]["params"]["media"]["params"];
+          const containsURL = mediaObj.hasOwnProperty("file");
+          const correctAnswer = Object.entries(
+            questionObj.find((answer) => answer["correct"] === true)
+          );
+
           return (
             <MCQ
               key={index}
@@ -35,6 +35,8 @@ export default function Diksha(data) {
                 index + 1 + "." + " " + question[1]["params"]["question"]
               }
               answer={question[1]["params"]["answers"]}
+              correctAnswer={correctAnswer[2][1]}
+              imageURL={containsURL ? mediaObj["file"]["path"] : ""}
             />
           );
         })}
