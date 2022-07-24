@@ -1,8 +1,6 @@
 /** @format */
 
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Newsletter() {
@@ -16,7 +14,7 @@ export default function Newsletter() {
       </div>
       <div
         style={{
-          color: "#D05E70",
+          color: "black",
           display: "flex",
           flex: "1",
           justifyContent: "center",
@@ -25,12 +23,11 @@ export default function Newsletter() {
           gap: "1rem",
           width: "100vw",
           height: "100%",
-          backgroundColor: "#1B3EA8",
+          backgroundColor: "transparent",
         }}
       >
-        <Image src="/logoSVG.svg" alt="logo" width={300} height={300} />
         <h1 className={styles.title}>
-          Let&apos;s begin your journey at naeRaste
+          Let&apos;s begin your journey at nae raste
         </h1>
         <div className={styles.grid}>
           {subjects.map((subject, index) => (
@@ -45,7 +42,7 @@ export default function Newsletter() {
       <div className={styles.community}>
         <h1 className={styles.textGradient}>
           {" "}
-          naeRaste <br />
+          nae raste <br />
           नए रास्ते <br />
         </h1>
       </div>
