@@ -29,17 +29,6 @@ export default function Newsletter() {
         <h1 className={styles.title}>
           Let&apos;s begin your journey at nae raste
         </h1>
-        <p
-          style={{
-            color: "black",
-            fontSize: "1rem",
-            padding: "10px",
-            textAlign: "center",
-          }}
-        >
-          Currently, we are offering resources for class 9th students. One step
-          at a time.
-        </p>
         <div className={styles.grid}>
           {subjects.map((subject, index) => (
             <Link href={`https://${paths[index]}.naeraste.com/`} key={index}>
