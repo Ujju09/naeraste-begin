@@ -19,8 +19,8 @@ const Home: NextPage = () => {
         `}
 </Script>
       <Head>
-        <title>naeRaste</title>
-        <meta name="deScription" content="Superpowered notebooks" />
+        <title>nae raste</title>
+        <meta name="description" content="Superpowered notebooks" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest"/>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
