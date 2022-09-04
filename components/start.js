@@ -12,7 +12,7 @@ export default function Newsletter() {
     "Science lets you explore the world around you. It helps you understand the world and how it works.",
     "Social science is concerned with society and the relationships among individuals within a society.",
     "Doing maths is like finding patterns and solving puzzles. The best way to learn maths is to do lots of maths.",
-    "Participate in our research. This will help you become better leaners and help us improve our learning platform.",
+    "Could you participate in our research? It will help you become better learners and help us improve the learning platform.",
   ];
 
   return (
@@ -52,7 +52,7 @@ export default function Newsletter() {
           nae raste <br />
           नए रास्ते
         </h1>
-        <h4 className={styles.title}>Making every student lucky.</h4>
+        <h4 className={styles.title}>We are making every student lucky.</h4>
       </div>
     </div>
   );
