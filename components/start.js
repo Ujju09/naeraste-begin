@@ -47,7 +47,7 @@ export default function Newsletter() {
           <Card
             subject={`Participate`}
             description={`Could you participate in our research? It will help you become better learners and help us improve the learning platform.`}
-            url={`https://participate.naeraste.com/`}
+            url={`https://research.naeraste.com/`}
             cta={`Know More`}
           />
         </div>
