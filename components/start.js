@@ -6,13 +6,12 @@ import Card from "./card";
 
 import Image from "next/image";
 export default function Newsletter() {
-  const subjects = ["Science", "Social Science", "Maths", "Participate"];
-  const paths = ["science", "social", "maths", "research"];
+  const subjects = ["Science", "Social Science", "Maths"];
+  const paths = ["science", "social", "maths"];
   const descriptions = [
     "Science lets you explore the world around you. It helps you understand the world and how it works.",
     "Social science is concerned with society and the relationships among individuals within a society.",
     "Doing maths is like finding patterns and solving puzzles. The best way to learn maths is to do lots of maths.",
-    "Could you participate in our research? It will help you become better learners and help us improve the learning platform.",
   ];
 
   return (
@@ -36,14 +35,21 @@ export default function Newsletter() {
         }}
       >
         <div className={styles.grid}>
-          {subjects.map((subject, index) => (
+          {subjects.map((_, index) => (
             <Card
               key={index}
               subject={subjects[index]}
               description={descriptions[index]}
               url={`https://${paths[index]}.naeraste.com/`}
+              cta="Start Learning"
             />
           ))}
+          <Card
+            subject={`Participate`}
+            description={`Could you participate in our research? It will help you become better learners and help us improve the learning platform.`}
+            url={`https://participate.naeraste.com/`}
+            cta={`Know More`}
+          />
         </div>
       </div>
       <div className={styles.community}>

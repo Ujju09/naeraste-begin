@@ -14,7 +14,7 @@ export default function Card(props) {
         }}
       >
         <Link href={props.url}>
-          <button className={styles.button}>Start Learning</button>
+          <button className={styles.button}>{props.cta}</button>
         </Link>
       </div>
     </div>
