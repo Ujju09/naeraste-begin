@@ -10,7 +10,7 @@ export default function Card(props) {
       <div
         style={{
           display: "flex",
-          justifyContent: "end",
+          justifyContent: "start",
         }}
       >
         <Link href={props.url}>
